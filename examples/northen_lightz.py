@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-"""
-Example of printing colored text to the output.
-"""
+#!/usr/bin/env python3
 import os
 import curses
 from time import sleep
@@ -61,15 +58,15 @@ def main():
     print(HTML(
         '<style fg="#44ff44">CONTINUITY-OF-OPERATIONS PROTOCOLS\n\nINFILTRATING...\nTELCO WIRETAPS\nISP SPYWARE\nSATELLITE INTERCEPTS</style>'
         ))
-#    sleep(1)
+    sleep(1)
     print(HTML(
         '<style fg="#44ff44">LEA DATABASES\n   IAFIS\n   CODIS\n   NIBIN\n   SICAR\n   PBQ\n   NCIC</style>'
         ))
-#    sleep(1)
+    sleep(1)
     print(HTML(
         '<style fg="#44ff44">DOMESTIC FEEDS\n   NSA\n   CIA\n   DMI\n   FBI\n   DEA\n   IRS\n   DHS</style>'
         ))
-    sleep(1)
+    sleep(2)
 
     """
     Initiate curses menu

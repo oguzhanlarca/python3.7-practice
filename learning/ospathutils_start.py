@@ -24,6 +24,5 @@ def main():
   # Calculate how long ago the item was modified
 
 
-  
 if __name__ == "__main__":
   main()
