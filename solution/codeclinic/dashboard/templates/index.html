@@ -1,0 +1,71 @@
+{% load static %}
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <title>Manufacturing Process Status</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+  </head>
+  <body>
+    <center>
+      <h1>Manufacturing Process Status</h1>
+      <h3>Time: {{data.timestamp|date:'H:i:s'}}Z</h3>
+      <table>
+        <tr>
+          <td align="center">
+            <h3>Pulsometer Readout</h3>
+          </td>
+          <td align="center">
+            <h3>Engine Efficiency</h3>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+              <h1>{{ data.pulsometer_readout }}</h1>
+          </td>
+          <td align="center">
+            <canvas id="engineGauge"></canvas>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" colspan=2>
+            <div class="progress" style="height: 40px;">
+              <div class="progress-bar bg-danger w-100" role="progressbar"
+               aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <h4>Red Value: {{ data.red_value }}</h4>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" colspan=2>
+            <div class="progress" style="height: 40px;">
+              <div class="progress-bar bg-info w-100" role="progressbar"
+               aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <h4>Blue Value: {{ data.blue_value }}</h4>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" colspan=2>
+            <div class="progress" style="height: 40px;">
+              <div class="progress-bar bg-success w-100" role="progressbar"
+               aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <h4>Green Value: {{ data.green_value }}</h4>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <script src="{% static 'gauge.min.js' %}"></script>
+    <script src="{% static 'gauge_opts.js' %}"></script>
+    <script> // create engine gauge using gauge.js
+      var target = document.getElementById("engineGauge");
+      var gauge = new Gauge(target).setOptions(gauge_opts);
+      gauge.maxValue = 100;
+      gauge.setMinValue(60);
+      gauge.set({{ data.engine_efficiency }});
+    </script>
+  </body>
+</html>
