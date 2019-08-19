@@ -6,7 +6,9 @@ from urllib import request
 from datetime import date, time, timedelta
 from time import sleep
 
+
 def main():
+
   ## Operation System
   print(' ')  
   print('System               : ' + os.name)
@@ -33,9 +35,11 @@ def main():
   ## Make request via wtfismyip.com
   ## Define a variable to hold the source URL
   urlData2 = "https://wtfismyip.com/json"
-  
+  urlData3 = "https://get.geojs.io/v1/dns/ptr/"
   try:
     data = json.load(request.urlopen(urlData2))
+    ptrData = json.load(request.urlopen(urlData3 + '{YourFuckingIPAddress}'.format(**data) + '.json'))
+
   except Exception as e:
     print(e)
   else:
@@ -44,7 +48,8 @@ def main():
     print('Fucking Location     : {YourFuckingLocation}, {YourFuckingCountryCode}'.format(**data))
     print('Fucking Hostname     : {YourFuckingHostname}'.format(**data))
     print('Fucking Sub ISP      : {YourFuckingISP}'.format(**data))
-    print('Fucking Tor Exit     : {YourFuckingTorExit}'.format(**data))    
+    print('Fucking Tor Exit     : {YourFuckingTorExit}'.format(**data)) 
+    print('Reverse DNS PTR      : {ptr}'.format(**ptrData))
 
 if __name__ == "__main__":
   main()
