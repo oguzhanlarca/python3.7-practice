@@ -1,4 +1,5 @@
 #### one lin if condition ########################
+import sys
 condition = True
 x = 1 if condition else 0
 print(x)
@@ -20,7 +21,6 @@ names = ['Corey', 'Chris', 'Dave', 'Travis']
 for index, name in enumerate(names, start=1):
     print(index, name)
 #### redirection stdout ##########################
-import sys
 sys.stdout = open('file', 'w')
 print('test')
 #### shell redirection when executing ############
