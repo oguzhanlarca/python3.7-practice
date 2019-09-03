@@ -13,7 +13,7 @@ def main():
     print(next(i))  # Tue
 
     # iterate using a function and a sentinel
-    with open("testfile.txt", "r") as fp:
+    with open("/Users/oguzhan/pyhton3.7-practices/advanced/02 BuiltIn Functions/testfile.txt", "r") as fp:
         for line in iter(fp.readline, ''):
             print(line)
 
