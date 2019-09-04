@@ -1,3 +1,5 @@
+# Become a Python Developer
+## Course notes, source codes, useful links, tips and tricks  ← 🛠
 ## Prerequisites
 *   Python 3.7.4 64-bit or greater
 *   The pip3.7 package management tool or greater
