@@ -1,3 +1,10 @@
+#!/usr/bin/python3.7
+
+__author__ =  "oguzhanlarca"
+__email__ =   "cu.oguzhan@gmail.com"
+__status__ =  "Development"
+__date__ =    "Late Updated: 2019-09-21"
+
 from rtlsdr import RtlSdr
 
 sdr = RtlSdr()

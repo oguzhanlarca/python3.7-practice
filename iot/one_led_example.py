@@ -1,5 +1,13 @@
 #!/usr/bin/env python3.7
 
+# This example is worse than c pi libs.
+# You should work with gpiozero...
+
+__author__ =  "oguzhanlarca"
+__email__ =   "cu.oguzhan@gmail.com"
+__status__ =  "Development"
+__date__ =    "Late Updated: 2019-09-21"
+
 import RPi.GPIO as GPIO
 import time
 
