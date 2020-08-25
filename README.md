@@ -1,7 +1,3 @@
-## Prerequisites
-*   Python 3.7.4 64-bit or greater
-*   The pip3.7 package management tool or greater
-
 ## awesome-python sources
 <code>https://github.com/vinta/awesome-python</code><br> 
 <code>https://github.com/trananhkma/fucking-awesome-python</code><br> 
